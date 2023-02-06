@@ -9,15 +9,16 @@ It is not finished yet (and probably never will) but if you want to take a look 
 ## For Window users
 
 1. Clone the repository, and run `GenerateProjects.bat`. This will create a solution file for Visual Studio 2022.
-2. Open the solution, and build it. Make sure to build in Distribution mode (although it should not make a big difference).
-3. Copy the DLLs from the `Libs\Windows` directory to the binaries contained in the `bin\Distribution-windows-x86_64\Mango` directory. Maybe one day I will be motivated enough to make this a post-build task but today is not that day :(
+2. Open the solution, and build it. Make sure to build in Distribution mode (although it should not make a big difference). The binaries will be generated in the `bin\Distribution-windows-x86_64\Mango` directory.
+3. Run Mango.
 4. ???
-5. Profit
+5. Profit.
 
 ## For Linuwux users
 
 1. You'll need to install `GLFW3` first (the way to install it will depend on you distribution)
 2. Clone the repository and run `GenerateProjects.sh`. This will create all the Makefiles necessary.
-3. Run `make`
-4. ???
-5. Profit
+3. Run `make`. The binaries will be generated in the `bin\Distribution-windows-x86_64\Mango` directory.
+4. Run Mango.
+5. ???
+6. Profit

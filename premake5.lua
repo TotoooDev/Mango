@@ -17,6 +17,7 @@ project "Mango"
 
     targetdir ("bin/" .. outputDir .. "/%{prj.name}")
     objdir ("bin-intermediate/" .. outputDir .. "/%{prj.name}")
+	debugdir ("bin/" .. outputDir .. "/%{prj.name}")
 
     files
 	{
@@ -45,6 +46,10 @@ project "Mango"
 		{
 			"glfw3dll",
 			"opengl32"
+		}
+		postbuildcommands
+		{
+			"copy ..\\Libs\\Windows\\glfw3.dll ..\\bin\\" .. outputDir .. "\\%{prj.name}\\"
 		}
 
 	filter "system:linux"
@@ -77,4 +82,3 @@ project "Mango"
 	filter "configurations:Distribution"
 		defines "MANGO_DIST"
 		optimize "On"
-

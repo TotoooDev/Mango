@@ -2,10 +2,8 @@
 #include <Mango/Window.h>
 #include <imgui/imgui.h>
 
-int main()
+int main(int argc, char* argv[])
 {
-    std::cout << "Hello Mango!" << std::endl;
-
     Mango::WindowSpecification spec("Mango", 800, 600, false);
     Mango::Window window(spec);
 
@@ -13,7 +11,7 @@ int main()
     {
         window.Update();
 
-        ImGui::ShowDemoWindow();
+        // ImGui::ShowDemoWindow();
 
         ImGui::Begin("Canvas");
 
