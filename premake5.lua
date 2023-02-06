@@ -37,15 +37,41 @@ project "Mango"
 		cppdialect "C++17"
 		staticruntime "On"
 		systemversion "latest"
+		libdirs
+		{
+			"Libs/Windows"
+		}
+		links
+		{
+			"glfw3dll",
+			"opengl32"
+		}
 
-		-- add windows specific stuff here
+	filter "system:linux"
+		cppdialect "C++17"
+		staticruntime "On"
+		systemversion "latest"
+		links
+		{
+			"glfw3",
+			"GL"
+		}
 
 	filter "configurations:Debug"
-		defines "MANGO_DEBUG"
+		defines
+		{
+			"MANGO_DEBUG",
+			"MANGO_DO_ASSERT",
+			"MANGO_OPENGL_DEBUG"
+		}
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "MANGO_RELEASE"
+		defines
+		{
+			"MANGO_DEBUG",
+			"MANGO_DO_ASSERT",
+		}
 		optimize "On"
 
 	filter "configurations:Distribution"
