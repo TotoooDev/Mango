@@ -16,7 +16,7 @@ It is not finished yet (and probably never will) but if you want to take a look 
 
 ## For Linuwux users
 
-1. You'll need to install `GLFW3` first (the way to install it will depend on you distribution)
+1. You'll need to install `GLFW3` first (the way to install it will depend on your distribution)
 2. Clone the repository and run `GenerateProjects.sh`. This will create all the Makefiles necessary.
 3. Run `make`. The binaries will be generated in the `bin\Distribution-windows-x86_64\Mango` directory.
 4. Run Mango.
