@@ -1,6 +1,7 @@
 #pragma once
 #include <Mango/Layer.h>
 #include <imgui/imgui.h>
+#include <vector>
 
 namespace Mango
 {
@@ -9,12 +10,11 @@ namespace Mango
     public:
         void OnStart() override {}
         void OnUpdate(float timestep) override {}
-        void OnImGuiRender() override
-        {
-            ImGui::Begin("Canvas");
-            ImGui::Text("Proute");
-            ImGui::End();
-        }
+        void OnImGuiRender() override;
         void OnEnd() override {}
+
+    private:
+        ImVec2 m_Scrolling = ImVec2(0.0f, 0.0f);
+        std::vector<ImVec2> m_Points;
     };
 }

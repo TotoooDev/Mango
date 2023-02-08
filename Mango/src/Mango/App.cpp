@@ -1,5 +1,6 @@
 #include <Mango/App.h>
 #include <Mango/Log.h>
+#include <imgui/imgui.h>
 #include <algorithm>
 
 namespace Mango
