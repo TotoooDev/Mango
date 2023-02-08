@@ -26,7 +26,10 @@ namespace Mango
 
 		void Update();
 		void Display();
-		bool ShouldClose() { return glfwWindowShouldClose(m_NativeWindow); }
+		bool ShouldClose() const { return glfwWindowShouldClose(m_NativeWindow); }
+
+        GLFWwindow* GetNativeWindow() const { return m_NativeWindow; }
+        WindowSpecification GetSpec() const { return m_Spec; }
 
 	private:
 		void SetupImGui();
