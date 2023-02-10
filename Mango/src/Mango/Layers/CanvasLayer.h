@@ -14,7 +14,14 @@ namespace Mango
         void OnEnd() override {}
 
     private:
+        struct Node
+        {
+            std::vector<Node*> LinkedNodes;
+            bool IsFirst = false;
+            bool IsFinal = false;
+        };
+
         ImVec2 m_Scrolling = ImVec2(0.0f, 0.0f);
-        std::vector<ImVec2> m_Points;
+        std::vector<Node> m_Points;
     };
 }
