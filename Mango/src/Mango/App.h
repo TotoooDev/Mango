@@ -13,6 +13,7 @@ namespace Mango
         static App& Get() { return *m_Instance; }
 
         void Run();
+        void Quit();
 
         void AddLayer(Layer* layer);
         void RemoveLayer(Layer* layer);
@@ -28,6 +29,7 @@ namespace Mango
         Window m_Window;
         std::vector<Layer*> m_Layers;
 
+        bool m_IsRunning = true;
         float m_LastFrame = 0.0f;
         float m_Timestep = 0.0f;
     };

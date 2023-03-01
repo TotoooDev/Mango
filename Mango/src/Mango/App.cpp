@@ -18,9 +18,10 @@ namespace Mango
 
     void App::Run()
     {
-        while (!m_Window.ShouldClose())
+        while (m_IsRunning)
         {
             m_Window.Update();
+            m_IsRunning = !m_Window.ShouldClose();
 
             for (auto& layer : m_Layers)
             {
@@ -36,6 +37,11 @@ namespace Mango
 
             UpdateTimestep();
         }
+    }
+
+    void App::Quit()
+    {
+        m_IsRunning = false;
     }
 
     void App::AddLayer(Layer* layer)
